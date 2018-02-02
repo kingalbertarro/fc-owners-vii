@@ -47,7 +47,7 @@ body {  }
   background-color: #00d929;
   border-bottom: 4px solid #00991c;
   border-radius: 30px;
-  bottom: 35px;
+  bottom: 10px;
   box-shadow: 1px 1px 26px 1px rgba(0,0,0,0.75);
   color: #fff;
   display: block;
@@ -130,7 +130,9 @@ body {  }
   bottom: -39px;
   z-index: 100;
 }
-.restaurant .restaurant-content .restaurant-cover img { display: block; }
+.restaurant .restaurant-content .restaurant-cover img.pc { display: block; }
+.restaurant .restaurant-content .restaurant-cover img.sp { display: none; }
+.restaurant .restaurant-content .restaurant-cover img { width: 100%; }
 
 /* SUCCESS */
 .success {
@@ -236,9 +238,6 @@ body {  }
  padding: 22px 0;
  text-align: center;
  width: 782px;
-}
-.pointers h2 span {
- color: #ffff00;
 }
 .pointers ul.point-list {
  display: block;
@@ -696,7 +695,7 @@ body {  }
  display: block;
  margin: 0 auto 135px;
  overflow: hidden;
- width: 987px;
+ width: 896px;
 }
 .request h2 figure.form-title-sp {
  display: none;
@@ -724,13 +723,13 @@ body {  }
  background-image: url('../images/common/form-ribbon.png');
  display: block;
  content: '';
- height: 138px;
+ height: 124px;
  left: -50px;
  margin: 0 auto;
  position: absolute;
  right: -50px;
- top: -125px;
- width: 653px;
+ top: -113px;
+ width: 596px;
 }
 .request .form-wrap figure.form-ribbon span {
  color: #fff;
@@ -738,7 +737,7 @@ body {  }
  font-family: メイリオ, Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Helvetica, sans-serif;
  font-size: 34px;
  font-weight: bold;
- margin-top: 70px;
+ margin-top: 58px;
  margin-left: 210px;
 }
 .request .progress-wrap {
@@ -962,16 +961,68 @@ body {  }
  span.nl-sp { display: block; }
  #p-wrap { overflow: hidden; }
  .container { width: 100%; }
+ #p-banner { box-shadow: none; }
  #p-banner figure img.main-pc { display: none; }
  #p-banner figure img.main-sp { display: block; }
  #p-header { padding: 16px 10px; }
  #p-header a img { width: 45%; }
  #p-banner a.btn {
-  bottom: 30px;
+  bottom: 10px;
   font-size: .8rem;
   padding: 12px 0 10px;
   width: 60%;
  }
+ .restaurant { box-shadow: none; }
+ .restaurant h2 {
+  font-size: 24px;;
+  line-height: 28px;
+  padding: 18px 0;
+ }
+ .restaurant h2:after {
+  border-left: 34px solid transparent;
+  border-right: 34px solid transparent;
+  border-top: 19px solid #4f5860;
+  bottom: -19px;
+ }
+ .restaurant h2:before {
+  border-left: 34px solid transparent;
+  border-right: 34px solid transparent;
+  border-top: 19px solid rgba(0,0,0,.4);
+  bottom: -20px;
+ }
+ .restaurant .restaurant-content .restaurant-cover img.pc { display: none; }
+ .restaurant .restaurant-content .restaurant-cover img.sp { display: block; }
+ .success h2 {
+  font-size: 24px;;
+  line-height: 28px;
+  padding: 18px 0;
+ }
+ .success h2:after {
+  border-left: 34px solid transparent;
+  border-right: 34px solid transparent;
+  border-top: 19px solid #de5e25;
+  bottom: -19px;
+ }
+ .success h2:before {
+  border-left: 34px solid transparent;
+  border-right: 34px solid transparent;
+  border-top: 19px solid rgba(180,172,170,.5);
+  bottom: -19px;
+ }
+ .success .success-content {
+  background-image: url(../images/common/success-bg-sp.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0;
+  padding: 26px 5% 90px;
+ }
+ .success .success-content p {
+  font-size: 12px;
+  line-height: 30px;
+ }
+ .success .success-content p.pc { display: none }
+ .success .success-content p.sp { display: block; }
  .lifetime { padding: 15px 0; }
  .lifetime .lifetime-content { padding: 10px 0 10px; width: 90%; }
  .lifetime .lifetime-content h2 { font-size: 20px; line-height: 24px; padding: 12px 0; }
@@ -995,19 +1046,40 @@ body {  }
  }
  .lifetime .lifetime-content p.pc { display: none; }
  .lifetime .lifetime-content p.sp { display: block; }
+ .pointers { background-image: url(../images/common/bg01-sp.png);}
+ .pointers:after {
+    background-image: url(../images/common/accent-sp.png);
+    background-position: bottom center;
+    background-size: cover;
+    content: '';
+    width: 49.5px;
+    height: 14px;
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    margin: 0 auto;
+    bottom: -14px;
+    z-index: 600;
+}
  .pointers h2 {
+  background-image: url(../images/common/point-header-sp.png);
   font-size: 16px;
-  line-height: 16px;
-  margin: 0 auto 25px;
-  padding: 9px 0;
+  line-height: 22px;
+  margin: 0 auto 38px;
+  padding: 10px 0;
   width: 95%;
  }
  .pointers ul.point-list li {
+  display: block;
   float: none;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
   width: 80%;
  }
- .pointers ul.point-list li:before { height: 55px; width: 55px; }
+ .pointers ul.point-list li:before {
+   height: 64px;
+   left: -10px;
+   top: -24px;
+   width: 69px; }
  .pointers ul.point-list li:last-child { margin-bottom: 15px; margin-right: auto; }
  .pointers ul.point-list li figure img {
   height: 100%;
